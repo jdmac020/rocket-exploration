@@ -1,0 +1,15 @@
+body {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banana {
+    background-image: url("banana.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 3em;
+    text-align: center;
+}
