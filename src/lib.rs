@@ -9,7 +9,7 @@ mod routes;
 
 pub fn rocket_builder() -> rocket::Rocket {
     rocket::ignite().attach(SpaceHelmet::default())
-    .mount("/", routes![routes::echo::echo_fn])
+    .mount("/", routes![routes::ping::ping_fn])
 
     .mount("/files", StaticFiles::from("static/"))
 }
