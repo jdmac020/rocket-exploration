@@ -26,7 +26,7 @@ fn get_user_by_id() {
     let mut response = client.get("/api/users/5").dispatch();
     assert_eq!(response.status(), Status::Ok);
     assert_eq!(response.content_type(), Some(ContentType::JSON));
-    assert_eq!(response.body_string(), Some("{\"status\":\"Success\",\"message\":\"Detailson User 5\"}".into()));
+    assert_eq!(response.body_string(), Some("{\"status\":\"Success\",\"message\":\"Details on User 5\"}".into()));
 }
 
 #[test]

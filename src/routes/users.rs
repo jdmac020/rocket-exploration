@@ -28,21 +28,21 @@ pub fn get_users_rt() -> Json<Response> {
 }
 
 #[post("/users")]
-pub fn create_user_rt() -> String {
-    "User created!".to_string()
+pub fn create_user_rt() -> Json<Response> {
+    Json(Response::ok("User created!"))
 }
 
 #[get("/users/<id>")]
-pub fn get_user_rt(id: String) -> String {
-    format!("Details on User {}", id)
+pub fn get_user_rt(id: String) -> Json<Response> {
+    Json(Response::ok(&* format!("Details on User {}", id)))
 }
 
 #[put("/users/<id>")]
-pub fn update_user_rt(id: String) -> String {
-    format!("Updated User {}", id)
+pub fn update_user_rt(id: String) -> Json<Response> {
+    Json(Response::ok(&* format!("Updated User {}", id)))
 }
 
 #[delete("/users/<id>")]
-pub fn delete_user_rt(id: String) -> String {
-    format!("Deleted User {}", id)
+pub fn delete_user_rt(id: String) -> Json<Response> {
+    Json(Response::ok(&* format!("Deleted User {}", id)))
 }
